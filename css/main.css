@@ -9,11 +9,31 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+@font-face {
+    font-family: myriad-pro-bold;
+    src: url(myriad-bold.ttf);
+}
+@font-face {
+    font-family: myriad-pro-thin;
+    src: url(myriad-thin.ttf);
+}
+@font-face {
+    font-family: myriad-pro;
+    src: url(myriad-pro.ttf);
+}
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: myriad-pro;
+}
+
+body{
+    overflow-x: hidden;    
+}
+
+h1{
+    margin: 0;
 }
 
 /*
@@ -95,20 +115,527 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+a{
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 6%;
+    margin: 1.2em 0;
+}
+
+nav img{
+    width: 25px;
+    height: 25px;
+    opacity: .5;
+}
+
+.landing-page{
+    margin: 0 20px;    
+}
+
+.container-tagline{
+    position: relative;
+    font-size: 1.8em;
+    font-family:"myriad-pro-bold";
+    text-transform: uppercase;
+/*    letter-spacing: 5px;*/
+    letter-spacing: -.25px;
+    line-height: 1.5em;
+    }
+
+.container-tagline-bg{
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#41b1ff+0,08f5d2+100 */
+    background: #41b1ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #41b1ff 0%, #08f5d2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #41b1ff 0%,#08f5d2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #41b1ff 0%,#08f5d2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41b1ff', endColorstr='#08f5d2',GradientType=0 ); /* IE6-9 */
+
+    left: 10%;
+    width: 80%;
+    height: 100%;
+}
+
+.container-tagline-text-grad{
+        position: absolute;
+    padding: 2% 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#41b1ff+0,08f5d2+100 */
+    background: #41b1ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #41b1ff 0%, #08f5d2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #41b1ff 0%,#08f5d2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #41b1ff 0%,#08f5d2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41b1ff', endColorstr='#08f5d2',GradientType=0 ); /* IE6-9 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.container-tagline-text-white{
+    position: relative;
+    color: white;
+    padding: 2% 0;
+    -webkit-clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+    clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+}
+
+.container-content{
+    margin: 2em 20px;
+}
+
+.container-content h1{
+    font-family:"myriad-pro-bold";
+    color: rgba(0,0,0,.8);
+    letter-spacing: -.025em;
+    font-size: 28px;
+    padding: 1.2em 0 .5em;
+}
+
+
+.container-content h1 img{
+    width: 20px;
+    padding: 0 0 5px 0;
+}
+
+
+br.show-small{
+    display: none;
+}    
+
+
+@media screen and (max-width: 767px){
+    br.show-small{
+        display: block;
+    }    
+    
+}
+
+@media screen and (min-width: 767px){
+    nav{
+        padding: 1% 12%;
+    }
+    .container-tagline{
+        font-size: 2.4em;
+    }  
+    .landing-page{
+        width: 700px;    
+    margin: auto;
+    }
+    .container-content{
+        width: 700px;    
+        margin: 2.2em auto;
+    }
+    .container-content h1{
+        font-size: 32px;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1024px){
+    .container-tagline{
+        font-size: 2.8em;
+    }  
+    nav img{
+        width: 30px;
+        height: 30px;
+    }
+}
 
 
 
 
+.container-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.box{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-family:"myriad-pro-bold";
+    color: rgba(0,0,0,.8);
+    letter-spacing: -.03em;
+    line-height: 1.2em;
+}
+
+.box-image{
+    flex-basis: 86%; 
+    order: 1;
+}
+.box-tools{
+    flex-basis: 14%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    opacity: .8;
+    justify-content: flex-end;
+    align-items: center;
+}
+.box-tools img{
+    padding: 3px 0;
+    width: 32px;
+}
+
+.box-tagline{
+    order: 3;
+    padding: .75em .5em .5em 0;
+}
+
+.box-tags{
+    font-size: .8em;
+    font-family: myriad-pro;
+    color: rgba(0,0,0,.5);
+    order: 4;
+}
+
+.box-image img{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+
+
+@media screen and (min-width: 767px){
+
+    .box{
+        margin-bottom: 85px;
+        align-content: flex-start;
+    }
+    
+    .box-tools{
+        padding: .5em 0 .5em 0;
+        flex-direction: row;
+        order: 3;
+        align-items: flex-start;
+        flex: 1;
+    }
+    .box-tools img{
+        padding: 0 2px;
+        width: 31px;
+    }
+    .box-tools span{
+        font-size: 1.2em;
+        color: rgba(0,0,0,.5);
+        padding-left: 2px;
+    }
+    
+    .box:nth-child(odd){
+        margin-right: 30px;      
+    }
+    
+    .box-image img{
+        width: 333px;
+/*        width: 335px;*/
+    }
+    .container-box{
+        display: flex;
+        flex-direction: row;
+    }
+    .box-tagline{
+        order: 2;
+        flex-basis: 70%;
+    }
+
+}
+
+.case-studies a.left{
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    padding-bottom: 4px;
+}
+
+#experience{
+    width: 1040px;    
+    width: 100%; 
+    margin: 2em 0;
+}
+
+#experience h1{
+    margin-left: 20px;
+}
+
+.masonry { 
+    column-count: 2;
+    column-gap: 0px;
+    margin: 1em 0px;
+}
+
+
+.item { 
+    background-color: white;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0px;
+    /*    border: 1px solid rgba(0,0,0,.13); */
+    /*    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);*/
+}
+@media screen and (min-width: 767px){
+
+    #experience h1{
+        width: 700px;    
+        margin: auto;
+    }
+    .masonry { 
+        column-count: 6;
+        margin: 1em 30px;
+        column-gap: 30px;
+    }
+    .item { 
+        margin-bottom: 30px;
+        /*    border: 1px solid rgba(0,0,0,.13); */
+        /*    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);*/
+    }
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgba(0,0,0,.6);
+    position: relative;
+}
+
+.card img{
+    max-width: 70%;
+    padding: 10% 15%;
+}
+
+.title{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 10%;
+}
+
+.company{
+    padding:0 10%;
+}
+.mit{
+    background: rgba(0,0,0,.85);
+    color: white;
+}
+
+.zealicon{
+    background-image: url(../img/zealicon-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+@keyframes animatedBackground {
+    from { background-position: 0 100% ; }
+    to { background-position: 241px 100% ; }
+}
+@-webkit-keyframes animatedBackground {
+    from { background-position: 0 100%; }
+    to { background-position: 100% 100%; }
+}
+@-ms-keyframes animatedBackground {
+    from { background-position: 0 100%; }
+    to { background-position: 100% 100%; }
+}
+@-moz-keyframes animatedBackground {
+    from { background-position: 0 100%; }
+    to { background-position: 100% 100%; }
+}
+
+
+.dfw{
+    background-image: url(../img/header_bg.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 17%;
+    animation: animatedBackground 1s linear infinite;
+    -ms-animation: animatedBackground 1s linear infinite;
+    -moz-animation: animatedBackground 1s linear infinite;
+    -webkit-animation: animatedBackground 3.5s linear infinite;
+    padding-bottom: 40px;
+/*
+    border-left: 1px solid rgba(0,0,0,.13); 
+    border-top: 1px solid rgba(0,0,0,.13); 
+    
+*/
+/*    background-color: rgba(0,0,0,.02);*/
+    background-color: rgba(255, 216, 0, 0.08);
+    
+}
+
+
+
+.eninov{
+    background: #FF5F6D; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FF5F6D , #FFC371); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+    color: white;
+
+}
+
+.oah{
+    background: #e3f2fe; 
+
+    color:rgba(5, 93, 131, 0.6);
+}
+.oah img{
+    padding: 0 0 5% 0;
+    max-width: 100%;
+}
+
+.eninov img{
+    padding-top: 0;
+}
+.eninov p.title{
+    color: white;
+}
+
+.ncs{
+    background: rgba(0,0,0,.02)
+}
+
+.ncs img{
+    padding: 0 0 5% 0;
+    max-width: 100%;
+}
+
+.kgs{
+    background-image: url(../img/kgs.jpg);
+    color: white;
+    background-size: cover;
+}
+
+.kgs img{
+    max-width: 100%;
+}
+
+.magneto{
+/*    border-left: 1px solid rgba(0,0,0,.13); */
+/*    border-bottom: 1px solid rgba(0,0,0,.13); */
+/*    border-right: 1px solid rgba(0,0,0,.13); */
+    background-color: rgba(0,0,0,.015)
+
+}
+
+.pny{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fca57e+0,f63d91+100 */
+    background: rgb(252,165,126); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(252,165,126,1) 0%, rgba(246,61,145,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(252,165,126,1) 0%,rgba(246,61,145,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(252,165,126,1) 0%,rgba(246,61,145,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fca57e', endColorstr='#f63d91',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+color:white;
+}
+
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: myriad-pro-bold;
+    overflow: hidden;
+}
+
+.skills::after{
+    content: "UI/UX";
+    position: absolute;
+    right: 0;
+    font-size: 11em;
+    line-height:.617em;
+    opacity: .04;
+    z-index: -1;
+    bottom: 4.8px;
+}
+
+.container-skill{
+    font-size: 1.5em;
+    position: relative;
+    text-transform: uppercase;
+}
+.container-skill> div:first-child{
+    position: absolute;
+    color: rgba(0,0,0,.85);
+}
+.container-skill> div:nth-child(2){
+    color: rgba(0,0,0,.3);
+}
+
+.container-skill-dark{
+/*    position: absolute;*/
+/*    color: rgba(0,0,0,.85);*/
+}
+
+.container-skill-light{
+/*    color: rgba(0,0,0,.3);*/
+    
+}
+/*
+
+.html{
+    -webkit-clip-path: polygon(0% 0, 90% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(0% 0, 90% 0, 90% 100%, 0% 100%);
+}
+
+.css{
+    -webkit-clip-path: polygon(0% 0, 80% 0, 80% 100%, 0% 100%);
+    clip-path: polygon(0% 0, 80% 0, 80% 100%, 0% 100%);
+}
 
 
 
 
+@keyframes texteffect {
+    from { -webkit-clip-path: polygon(0% 0, 0% 0, 0% 100%, 0% 100%);}
+    to { -webkit-clip-path: polygon(0% 0, 90% 0, 90% 100%, 0% 100%); }
+}
+@-webkit-keyframes texteffect {
+    from { -webkit-clip-path: polygon(0% 0, 0% 0, 0% 100%, 0% 100%);}
+    to { -webkit-clip-path: polygon(0% 0, 90% 0, 90% 100%, 0% 100%); }
+}
+@-ms-keyframes texteffect {
+    from { -webkit-clip-path: polygon(0% 0, 0% 0, 0% 100%, 0% 100%);}
+    to { -webkit-clip-path: polygon(0% 0, 90% 0, 90% 100%, 0% 100%); }
+}
+@-moz-keyframes texteffect {
+    from { -webkit-clip-path: polygon(0% 0, 0% 0, 0% 100%, 0% 100%);}
+    to { -webkit-clip-path: polygon(0% 0, 90% 0, 90% 100%, 0% 100%); }
+}
 
 
 
+.HTML5:first-child{
+    animation: texteffect 2s linear infinite;
+    -ms-animation: texteffect 2s linear infinite;
+    -moz-animation: texteffect 2s linear infinite;
+    -webkit-animation: texteffect 2s linear infinite;
 
+}
+*/
 
+.about p{
+    font-size: 1.6em;
+    line-height: 37px;
+}
 
+.about span{
+    background: rgba(255, 255, 0, 0.37);
+    padding: 4px;
+}
 
 
 /* ==========================================================================
@@ -123,10 +650,14 @@ textarea {
     display: none !important;
 }
 
+
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
+.center{
+/*    text-align: center;*/
+}
 
 .visuallyhidden {
     border: 0;

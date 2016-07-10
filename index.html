@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="filltext">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,20 +12,289 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body ng-controller="TextController as filltext">  
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+        
+        <nav>
+            <img src="img/menu.svg">
+        </nav>
+
+        
+
+        <section class="landing-page">
+            <div class="container-tagline">
+                <div class="container-tagline-bg">
+                </div>
+                <div class="container-tagline-text-grad">
+                    <p>Anant Garg<br class="show-small">
+                    is a<br>
+                    Designer, <br>
+                        Frontend <br class="show-small" >
+                    Developer <br>
+                        &amp; overall <br  class="show-small">
+                    web enthusiast 
+                    </p>
+                </div>
+                <div class="container-tagline-text-white">
+                    <p>Anant Garg<br class="show-small">
+                        is a<br>
+                        Designer, <br>
+                        Frontend <br class="show-small" >
+                        Developer <br>
+                        &amp; overall <br  class="show-small">
+                        web enthusiast
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="case-studies container-content" id="case_studies">
+            <h1>Case Studies  <a href="#case_studies"><img src="img/link.svg"></a></h1>
+            <div class="container-box">
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/email-01.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/html.svg">
+                        <img src="img/icons/css.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                        Context Aware information extraction from email<br>
+                    </div>
+                    <div class="box-tags">#context.io #monthly_expense #api #bootstrap</div>
+                </a>
+                
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/balala.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/js.svg">
+                        <img src="img/icons/ps.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                        Depression analysis based on tweets using IBM Watson AI
+                    </div>
+                    <div class="box-tags">#twitter_api #IBM_Bluemix #artificial_intelligence</div>
+                </a>
+                
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/box.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/html.svg">
+                        <img src="img/icons/css.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                        Aadhaar based e-wallet
+                    </div>
+                </a>
+                
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/box.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/html.svg">
+                        <img src="img/icons/css.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                        Context Aware information extraction from email
+                    </div>
+                </a>
+                
+                
+                
+            </div>
+            <a href="#" class="left">Load More</a>
+        </section>
+        
+        <section class="container-content" id="experience">
+            <h1>Experience <a href="#experience"><img src="img/link.svg"></a></h1>
+            
+            <div class="masonry">
+                <div class="item">
+                   <div class="card mit">
+                    <img src="img/mit.png">
+                    <p class="title">Organizer</p>
+                       <p class="company">MIT Global Startup workshop<br><small> March 2016</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                   <div class="card zealicon">
+                    <img src="img/zealicon.png">
+                    <p class="title">Festival secretary</p>
+                       <p class="company">Zealicon - Annual Techno Cultural Festival of JSSATEN<br><small> March 2016</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card kgs">
+                        <img src="img/kgs.png">
+                        <p class="title">Product Designer<br><br>  Web Developer 
+                        <p class="company">KGS Group<br><small> January 2014 – June 2016</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card ncs">
+                        <img src="img/ncs.png">
+                        <p class="title">Frontend Developer<br><br> UI / UX / Visual Designer<br><br>President</p>
+                        <p class="company">Nibble computer Society<br>JSSATE, Noida<br><small> March 2013 – June 2016</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card oah">
+                        <img src="img/oah.png">
+                        <p class="title">Frontend Developer</p>
+                        <p class="company">Online Assignments help<br><small> August 2015 – Sept 2015</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card magneto">
+                        <img src="img/magneto.jpg">
+                        <p class="title">Product Design Intern   
+                        <p class="company">Magneto environmental grouppe<br><small> January 2014 – June 2014</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card dfw">
+                        <img src="img/dfw.png">
+                        <p class="title">Frontend Developer</p>
+                        <p class="company">Delhi Food Walks<br><small> June 2014 – January 2015</small></p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="card pny">
+                        <img src="img/pinkandyou.png">
+                        <p class="title">Graphic Design Intern</p>
+                        <p class="company">Pink and You<br><small> June 2014 – December 2014</small></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card eninov">
+                        <img src="img/eninov.png">
+                        <p class="title">Mobile UI/UX Intern</p>
+                        <p class="company">Eninov Systems<br><small> October 2013 – February 2014</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+        
+        <section class="skills container-content" id="skills">
+        <h1>Skills  <a href="#skills"><img src="img/link.svg"></a></h1>
+ <!--
+            <div class="container-skill">
+                <div class="container-skill-dark html">
+                    HTML5
+                </div>
+                <div class="container-skill-light html">
+                    HTML5
+                </div>
+            </div>
+            <div class="container-skill">
+                <div class="container-skill-dark css">
+                     css3
+                </div>
+                <div class="container-skill-light css">
+                     css3
+                </div>
+            </div>
+-->
+            
+        </section>
+        
+        <section class="container-content" id="leisure">
+        <h1>Leisure Projects  <a href="#leisure"><img src="img/link.svg"></a></h1>
+
+            <div class="container-box">
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/email-01.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/html.svg">
+                        <img src="img/icons/js.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                      Tinder for College<br>
+                    </div>
+                    <div class="box-tags">#facebook_integration #infographics</div>
+                </a>
+                
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/email-01.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/ae.svg">
+                        <img src="img/icons/ps.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                      Visual Effects (VFX) Clip<br>
+                    </div>
+                    <div class="box-tags">#chroma_keying #motion_tracking #Element_3D</div>
+                </a>
+
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/balala.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/ps.svg">
+                        <img src="img/icons/ae.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                        Stop Motion Clip
+                    </div>
+                    <div class="box-tags">#sketching #motion_tracking</div>
+                </a>
+
+                <a class="box" href="#">
+                    <div class="box-image">
+                        <img src="img/box.jpg">
+                    </div>
+                    <div class="box-tools">
+                        <img src="img/icons/ps.svg">
+                        <img src="img/icons/ae.svg">
+                        <span>+</span>
+                    </div>
+                    <div class="box-tagline">
+                        Animation and 3D Video Clip
+                    </div>
+                    <div class="box-tags">#wireframe #3D_model</div>
+                </a>
+
+            </div>            
+        </section>
+        
+        <section class="about container-content" id="about">
+        <h1>About Anant  <a href="#about"><img src="img/link.svg"></a></h1>
+            <p>He loves <span>design</span> and never backs from getting his wits together to <span>code</span> it. Fresh from college, with a bunch of freelancing projects and startups experience in hand, he is looking forward to <span>learn</span> and evolve. </p>
+        </section>
+        
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
